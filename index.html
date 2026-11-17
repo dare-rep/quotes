@@ -349,8 +349,8 @@ console.log(quotes.length)
           }
 
           if(e.target.className = "save"){
-            copy.style.display = "none";
-            download.style.display = "none";
+            copy.style.visibility = "hidden";
+            download.style.visibility = "hidden";
 
             html2canvas(card)
             .then(chx => {
@@ -364,8 +364,8 @@ console.log(quotes.length)
               link.click()
             })
              .then(show => {
-               copy.style.display = "flex";
-               download.style.display = "flex";
+               copy.style.visibility = "visible";
+               download.style.visibility = "visible";
             })
           }
         })
