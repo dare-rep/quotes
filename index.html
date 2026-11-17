@@ -331,25 +331,16 @@ console.log(quotes.length)
       })
       
       console.log(observer)
-      cards.forEach((card , pos) => {
-        const copy = document.createElement('button');
+      cards.forEach((card , pos) => { 
         const download = document.createElement("button");
         download.textContent = "save";
         download.className = "save";
-        copy.className = "copy";
-        card.setAttribute("name" , quotes[pos])
-        copy.textContent = "copy";
+        card.setAttribute("name" , quotes[pos]);
         card.textContent = card.getAttribute('name');
         observer.observe(card)
-        
+     
 
-        card.addEventListener("click" , (e) => {
-          if(e.target.className === "copy"){
-            navigator.clipboard.writeText(card.getAttribute('name'));
-          }
-
-          if(e.target.className === "save"){
-            copy.style.visibility = "hidden";
+          if(e.target.className === "save"){
             download.style.visibility = "hidden";
 
             html2canvas(card)
@@ -364,13 +355,12 @@ console.log(quotes.length)
               link.click()
             })
              .then(show => {
-               copy.style.visibility = "visible";
                download.style.visibility = "visible";
             })
           }
         })
 
-        card.append(copy , download)
+        card.append(download)
       })
     </script>
   </div>
