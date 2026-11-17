@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html,body{
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to left , blue,green);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrapper{
+      width: 70%;
+      height: 80%;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,.2);
+      overflow-y: scroll;
+      display: flex;
+      justify-content: baseline;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+      gap: 5px;
+    }
+
+    .wrapper::-webkit-scrollbar{
+      width: 5px;
+      background-color: rgba(255,255,255,.5);
+    }
+
+    .wrapper::-webkit-scrollbar-track{
+      background-color: rgba(255,255,255,.2);
+    }
+
+    .wrapper::-webkit-scrollbar-thumb{
+      background-color: green;
+    }
+
+    .wrapper > .cards{
+      width: 75%;
+      aspect-ratio: 1/.7;
+      background-color: rgba(255,255,255,.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.2);
+      font-size: clamp(16px,10vw,27px);
+      opacity: .1;
+      overflow: wrap;
+      word-wrap: wrap;
+      word-break: break-word;
+      padding: 10px;
+      position: relative;
+      color: white;
+    }
+
+    .cards.chx{
+      transition: 0.4s;
+      opacity: 1;
+    }
+
+    .cards > .copy{
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 100px;
+      aspect-ratio: 1/.5;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 10px;
+      color: white;
+      font-size: clamp(15px,10vw,18px);
+    }
+
+    .cards > .save{
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 100px;
+      aspect-ratio: 1/.5;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 10px;
+      color: white;
+      font-size: clamp(15px,10vw,18px); 
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+      const cards = Array.from(document.querySelectorAll(".cards"));
+
+const quotes = [
+  "The only way to do great work is to love what you do.",
+  "Believe you can and you're halfway there.",
+  "It does not matter how slowly you go as long as you do not stop.",
+  "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+  "Hardships often prepare ordinary people for an extraordinary destiny.",
+  "Don't watch the clock; do what it does. Keep going.",
+  "Everything you've ever wanted is on the other side of fear.",
+  "Opportunities don't happen, you create them.",
+  "Dream big and dare to fail.",
+  "Act as if what you do makes a difference. It does.",
+  "Success usually comes to those who are too busy to be looking for it.",
+  "Don't be afraid to give up the good to go for the great.",
+  "I find that the harder I work, the more luck I seem to have.",
+  "Success is walking from failure to failure with no loss of enthusiasm.",
+  "The future belongs to those who believe in the beauty of their dreams.",
+  "You are never too old to set another goal or to dream a new dream.",
+  "If you want to achieve greatness stop asking for permission.",
+  "Things work out best for those who make the best of how things work out.",
+  "To live a creative life, we must lose our fear of being wrong.",
+  "If you are not willing to risk the usual, you will have to settle for the ordinary.",
+  "Trust because you are willing to accept the risk, not because it's safe or certain.",
+  "All our dreams can come true if we have the courage to pursue them.",
+  "Good things come to people who wait, but better things come to those who go out and get them.",
+  "If you do what you always did, you will get what you always got.",
+  "Just when the caterpillar thought the world was ending, he turned into a butterfly.",
+  "Successful entrepreneurs are givers and not takers of positive energy.",
+  "Whenever you see a successful person you only see the public glories, never the private sacrifices.",
+  "Great minds discuss ideas; average minds discuss events; small minds discuss people.",
+  "I have not failed. I've just found 10,000 ways that won't work.",
+  "If you don't value your time, neither will others.",
+  "A successful man is one who can lay a firm foundation with the bricks others have thrown at him.",
+  "No one can make you feel inferior without your consent.",
+  "The whole secret of a successful life is to find out what is one's destiny to do, and then do it.",
+  "If you're going through hell keep going.",
+  "What seems to us as bitter trials are often blessings in disguise.",
+  "The distance between insanity and genius is measured only by success.",
+  "Don't raise your voice, improve your argument.",
+  "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+  "Happiness is not something ready-made. It comes from your own actions.",
+  "Whatever you are, be a good one.",
+  "The best revenge is massive success.",
+  "Do what you can, with what you have, where you are.",
+  "If you can dream it, you can do it.",
+  "You miss 100% of the shots you don't take.",
+  "Whether you think you can or you think you can't, you're right.",
+  "I alone cannot change the world, but I can cast a stone across the water to create many ripples.",
+  "Nothing is impossible, the word itself says 'I'm possible'!",
+  "The question isn't who is going to let me; it's who is going to stop me.",
+  "The only limit to our realization of tomorrow will be our doubts of today.",
+  "It is never too late to be what you might have been.",
+  "Change your thoughts and you change your world.",
+  "Either you run the day, or the day runs you.",
+  "Your time is limited, so don't waste it living someone else's life.",
+  "Strive not to be a success, but rather to be of value.",
+  "Two roads diverged in a wood, and I took the one less traveled by, and that has made all the difference.",
+  "I attribute my success to this: I never gave or took any excuse.",
+  "You become what you believe.",
+  "The most difficult thing is the decision to act, the rest is merely tenacity.",
+  "Every strike brings me closer to the next home run.",
+  "Definiteness of purpose is the starting point of all achievement.",
+  "Life isn't about getting and having, it's about giving and being.",
+  "Life is 10% what happens to me and 90% of how I react to it.",
+  "The mind is everything. What you think you become.",
+  "An unexamined life is not worth living.",
+  "Eighty percent of success is showing up.",
+  "Winning isn't everything, but wanting to win is.",
+  "I am not a product of my circumstances. I am a product of my decisions.",
+  "Every child is an artist. The problem is how to remain an artist once he grows up.",
+  "You can never cross the ocean until you have the courage to lose sight of the shore.",
+  "Either write something worth reading or do something worth writing.",
+  "The two most important days in your life are the day you are born and the day you find out why.",
+  "Whatever you can do, or dream you can, begin it. Boldness has genius, power and magic in it.",
+  "The best time to plant a tree was 20 years ago. The second best time is now.",
+  "Go confidently in the direction of your dreams. Live the life you have imagined.",
+  "When I let go of what I am, I become what I might be.",
+  "Life is not measured by the number of breaths we take, but by the moments that take our breath away.",
+  "If you look at what you have in life, you'll always have more.",
+  "Remember that not getting what you want is sometimes a wonderful stroke of luck.",
+  "You can't use up creativity. The more you use, the more you have.",
+  "Dreaming, after all, is a form of planning.",
+  "Do one thing every day that scares you.",
+  "Smart people learn from everything and everyone, average people from their experiences, stupid people already have all the answers.",
+  "Do what you feel in your heart to be right—for you'll be criticized anyway.",
+  "Happiness is not by chance, but by choice.",
+  "Impossible is just an opinion.",
+  "Hold the vision, trust the process.",
+  "One day or day one. You decide.",
+  "Work hard in silence, let your success be the noise.",
+  "Don't stop when you're tired. Stop when you're done.",
+  "Wake up with determination. Go to bed with satisfaction.",
+  "Do something today that your future self will thank you for.",
+  "Little things make big days.",
+  "It's going to be hard, but hard does not mean impossible.",
+  "Don't wait for opportunity. Create it.",
+  "Sometimes we're tested not to show our weaknesses, but to discover our strengths.",
+  "The key to success is to focus on goals, not obstacles.",
+  "Dream it. Wish it. Do it.",
+  "Stay positive, work hard, make it happen.",
+  "Success doesn't just find you. You have to go out and get it.",
+  "Great things never come from comfort zones."
+];
+
+
+console.log(quotes.length)
+
+      const observer = new IntersectionObserver((elements) => {
+        elements.forEach(element => {
+          if(element.isIntersecting){
+            element.target.style.color = "red";
+            element.target.classList.toggle('chx')
+            console.log(element)
+          }
+        })
+      } , {
+        "root":wrapper,
+        "threshold":0.2
+      })
+      
+      console.log(observer)
+      cards.forEach((card , pos) => {
+        const copy = document.createElement('button');
+        const download = document.createElement("button");
+        download.textContent = "save";
+        download.className = "save";
+        copy.className = "copy";
+        card.setAttribute("name" , quotes[pos])
+        copy.textContent = "copy";
+        card.textContent = card.getAttribute('name');
+        observer.observe(card)
+        
+
+        card.addEventListener("click" , (e) => {
+          if(e.target.className === "copy"){
+            navigator.clipboard.writeText(card.getAttribute('name'));
+          }
+
+          if(e.target.className = "save"){
+            copy.style.display = "none";
+            download.style.display = "none";
+
+            html2canvas(card)
+            .then(chx => {
+              const bin = chx.toDataURL("image/jpeg");
+              return bin;
+            })
+            .then(data => {
+              const link = document.createElement("a");
+              link.href = data;
+              link.download = card.getAttribute("name")[0] + "image.jpeg";
+              link.click()
+            })
+          }
+        })
+
+        card.append(copy , download)
+      })
+    </script>
+  </div>
+</body>
+</html>
